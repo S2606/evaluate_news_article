@@ -1,0 +1,56 @@
+@import 'loader.scss';
+
+body {
+    background: #ffffc8;
+    font-size: 24px;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    padding: 0;
+    margin: 0;
+    color: #333333;
+    text-align: center;
+    height:120vh;
+    display: flex;
+    flex-direction: column;
+    margin: 120px;
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.url_form {
+    display: flex;
+    flex-direction: column;
+    font-size: 22px;
+    margin: 50px;
+    row-gap: 20px;
+    gap: 20px;
+}
+
+.url_formset {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#url {
+    font-size: 18px;
+}
+
+@media (max-width: 300px) {
+    .url_form {
+        font-size: 16px;
+    }
+
+    #url {
+        font-size: 14px;
+    }
+
+    .content_header{
+        font-size: 14px;
+    }
+}
+
