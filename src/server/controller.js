@@ -13,7 +13,7 @@ analyzeURLController = async (req, res) => {
         });
         const nlp_response_payload = await nlp_response_obj.json();
         if('status' in nlp_response_payload){
-            if(nlp_response_payload['status']=='0'){
+            if(nlp_response_payload['status']['code']==0){
                 return res.send({
                     text: nlp_response_payload.sentence_list[0].text,
                     score_tag : nlp_response_payload.score_tag,
@@ -21,10 +21,10 @@ analyzeURLController = async (req, res) => {
                     subjectivity : nlp_response_payload.subjectivity,
                     confidence : nlp_response_payload.confidence
                 });
-            } else if(nlp_response_payload['status']=='212'){
+            } else if(nlp_response_payload['status']['code']==212){
                 return res.send({
                     status: "failed",
-                    reason: `${nlp_response_payload['msg']}`
+                    reason: `${nlp_response_payload['status']['msg']}`
                 })
             }
         } else {
