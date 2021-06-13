@@ -18,4 +18,4 @@ By just running `npm run start`(after generating the dist folder ;), and Adding 
 
 ## And is something done about testing?
 
-Yes, can been senn by just running `npm run test`
+Yes, can been sen by just running `npm run test`
